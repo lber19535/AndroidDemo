@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="main_list_strs">
+        <item>App</item>
+        <item>View</item>
+        <item>Content</item>
+        <item>Animation</item>
+    </string-array>
+
+</resources>
