@@ -1,4 +1,4 @@
-package com.bill.demo.view.fragment;
+package com.exmaple.bill.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.bill.demo.R;
+import com.exmaple.bill.R;
 
 
 /**

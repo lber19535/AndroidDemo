@@ -7,6 +7,8 @@
 
     <string-array name="main_list_strs">
         <item>App</item>
+        <item>Activity</item>
+        <item>Fragment</item>
         <item>Views</item>
         <item>Content</item>
         <item>Animation</item>
@@ -16,7 +18,7 @@
         <item>ActionBar</item>
     </string-array>
 
-    <string-array name="view_list_strs">
-        <item>RollingView</item>
+    <string-array name="fragment_list_strs">
+        <item>RollingFragment</item>
     </string-array>
 </resources>
