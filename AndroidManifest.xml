@@ -40,6 +40,15 @@
                 <category android:name="android.intent.category.bill.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.exmaple.bill.utils.demo.ColorUtilsActivity"
+            android:label="Utils/Random Color" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
