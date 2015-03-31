@@ -25,7 +25,7 @@ import com.exmaple.bill.utils.ColorUtils;
  * @author Lv Beier
  *
  */
-public class ColorUtilsActivity extends Activity {
+public class ActivityColorUtils extends Activity {
 
     private View colorView;
     private TextView hsvTv;

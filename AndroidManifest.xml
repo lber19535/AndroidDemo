@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.utils.demo.ColorUtilsActivity"
+            android:name="com.exmaple.bill.utils.demo.ActivityColorUtils"
             android:label="Utils/Random Color" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
