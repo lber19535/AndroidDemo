@@ -1,5 +1,8 @@
 package com.exmaple.bill.view.demo;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +46,15 @@ public class ActivitySign extends Activity {
 
             @Override
             public void onClick(View v) {
+                try {
+                    mSignView.saveImage();
+                } catch (FileNotFoundException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
             }
         });
     }

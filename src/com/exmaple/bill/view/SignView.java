@@ -1,12 +1,19 @@
 package com.exmaple.bill.view;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.Paint.Style;
+import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +25,9 @@ import android.view.View;
  *
  */
 public class SignView extends View {
+
+    private static final String DEFAULT_IMAGE_PATH = "/img";
+    private static final String DEFAULT_IMAGE_NAME = "temp_image.png";
 
     private float mX;
     private float mY;
@@ -36,7 +46,6 @@ public class SignView extends View {
         mGesturePaint.setStyle(Style.STROKE);
         mGesturePaint.setStrokeWidth(5);
         mGesturePaint.setColor(Color.BLACK);
-
     }
 
     public SignView(Context context, AttributeSet attrs, int defStyle) {
@@ -105,11 +114,42 @@ public class SignView extends View {
             mY = y;
         }
     }
-    
+
     public void clearSgin() {
         mPath.reset();
         invalidate();
     }
-    
+
+    /**
+     * 将绘制的内容保存为png文件
+     * 
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
+    public void saveImage() throws FileNotFoundException, IOException {
+        saveImage(getContext().getCacheDir() + DEFAULT_IMAGE_PATH,
+                DEFAULT_IMAGE_NAME);
+    }
+
+    /**
+     * 文件格式为png
+     * 
+     * @param path 保存路径
+     * @param fileName 文件名
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
+    public void saveImage(String path, String fileName)
+            throws FileNotFoundException, IOException {
+        setDrawingCacheEnabled(true);
+        Bitmap bitmap = getDrawingCache();
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdir();
+        }
+        bitmap.compress(CompressFormat.PNG, 90, new FileOutputStream(path + "/"
+                + fileName));
+        setDrawingCacheEnabled(false);
+    }
 
 }
