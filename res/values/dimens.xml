@@ -9,5 +9,6 @@
     <dimen name="pager_indicator_margin">32dp</dimen>
     <dimen name="pager_indicator_layout_margin">8dp</dimen>
     <dimen name="pager_indicator_height">30dp</dimen>
+    <dimen name="font_22">22sp</dimen>
 
 </resources>

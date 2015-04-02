@@ -98,6 +98,10 @@ public class ActivityMain extends Activity {
             if (haveNext) {
                 // 2.1
                 String title = nextPath.split("/")[0];
+                // 判断是否有重复的title
+                if (haveSameTitle(list, title)) {
+                    continue;
+                }
                 item.put(TITLE, title);
                 // 2.1.1
                 String path = prefix + title + "/";
@@ -119,6 +123,15 @@ public class ActivityMain extends Activity {
             }
         }
         return list;
+    }
+
+    private boolean haveSameTitle(List<Map<String, Object>> list, String title) {
+        for (Map<String, Object> map : list) {
+            if (map.get(TITLE).toString().equals(title)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
