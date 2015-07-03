@@ -5,7 +5,7 @@
     tools:context="com.exmaple.bill.MainActivity" >
 
     <ImageView
-        android:id="@+id/drawable_anim"
+        android:id="@+id/anim_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

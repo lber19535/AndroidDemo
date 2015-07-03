@@ -15,6 +15,8 @@ import java.util.Random;
  */
 public class ColorUtils {
 
+    private static final Random rand = new Random();
+
     /**
      * 产生一个随机颜色
      * 
@@ -27,11 +29,11 @@ public class ColorUtils {
     /**
      * 产生一个随机颜色，得到颜色对应的rgb值
      * 
-     * @param rgb 需要填充的rgb数组
+     * @param rgb
+     *            需要填充的rgb数组
      * @return
      */
     public static int randomColor(int[] rgb) {
-        Random rand = new Random(System.currentTimeMillis());
         int h = rand.nextInt(360);
         int s = 100 - rand.nextInt(30);
         int v = 100 - rand.nextInt(30);
@@ -41,9 +43,12 @@ public class ColorUtils {
     /**
      * HSV转RGB
      * 
-     * @param h [0,360)
-     * @param s [0~100]
-     * @param v [0~100]
+     * @param h
+     *            [0,360)
+     * @param s
+     *            [0~100]
+     * @param v
+     *            [0~100]
      * @return 如果转换出问题则会返回0;
      */
     public static int HSV2RGB(int h, int s, int v, int[] rgb) {
@@ -53,9 +58,12 @@ public class ColorUtils {
     /**
      * HSV转RGB
      * 
-     * @param h 0~360
-     * @param s 0~1
-     * @param v 0~1
+     * @param h
+     *            0~360
+     * @param s
+     *            0~1
+     * @param v
+     *            0~1
      * @return 如果转换出问题则会返回0，返回结果中加入了0xFF的A的值;
      */
     public static int HSV2RGB(int h, float s, float v, int[] rgb) {
@@ -92,11 +100,14 @@ public class ColorUtils {
     }
 
     /**
-     *  rgb转换为hsv
+     * rgb转换为hsv
      * 
-     * @param r [0,360)
-     * @param g [0,100]
-     * @param b [0,100]
+     * @param r
+     *            [0,255]
+     * @param g
+     *            [0,255]
+     * @param b
+     *            [0,255]
      * @return hsv数组
      */
     public static float[] RGB2HSV(int r, int g, int b) {
@@ -139,7 +150,8 @@ public class ColorUtils {
     /**
      * 将hex颜色分离成ARGB的int数组
      * 
-     * @param color 0xFFFFFF or 0xFFFFFFFF
+     * @param color
+     *            0xFFFFFF or 0xFFFFFFFF
      * @return ARGB的int数组
      */
     public static int[] seperateColor2RGB(int color) {

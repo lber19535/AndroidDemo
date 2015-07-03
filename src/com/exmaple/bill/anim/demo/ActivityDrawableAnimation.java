@@ -15,7 +15,7 @@ import android.widget.ImageView;
  * @author Bill-pc
  *
  */
-public class DrawableAnimationActivity extends Activity {
+public class ActivityDrawableAnimation extends Activity {
 
     private AnimationDrawable mAnimationDrawable;
 
@@ -25,7 +25,7 @@ public class DrawableAnimationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawable_anim);
 
-        ImageView animImageView = (ImageView) findViewById(R.id.drawable_anim);
+        ImageView animImageView = (ImageView) findViewById(R.id.anim_view);
         animImageView.setBackground(getResources().getDrawable(
                 R.drawable.drawable_anim));
         mAnimationDrawable = (AnimationDrawable) animImageView.getBackground();

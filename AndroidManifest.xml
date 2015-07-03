@@ -59,8 +59,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.anim.demo.DrawableAnimationActivity"
+            android:name="com.exmaple.bill.anim.demo.ActivityDrawableAnimation"
             android:label="Animation/Drawable Animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.exmaple.bill.anim.demo.ActivityViewAnimation"
+            android:label="Animation/View Animation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
