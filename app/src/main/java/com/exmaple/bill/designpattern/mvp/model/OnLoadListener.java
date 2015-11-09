@@ -8,5 +8,5 @@ import java.util.List;
 public interface OnLoadListener {
 
     void loadSuccess(List<AppListItem> items);
-    void loadFaild();
+    void loadFailed();
 }

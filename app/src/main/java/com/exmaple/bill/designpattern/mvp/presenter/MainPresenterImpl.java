@@ -25,7 +25,7 @@ public class MainPresenterImpl implements MainPresenter,OnLoadListener {
     }
 
     @Override
-    public void getApplist() {
+    public void getAppList() {
         model.loadData();
     }
 
@@ -35,7 +35,7 @@ public class MainPresenterImpl implements MainPresenter,OnLoadListener {
     }
 
     @Override
-    public void loadFaild() {
+    public void loadFailed() {
 
     }
 }

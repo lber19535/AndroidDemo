@@ -39,7 +39,7 @@ public class MVPActivity extends AppCompatActivity implements MainView {
 
         appLv.setAdapter(adapter);
 
-        mainPresenter.getApplist();
+        mainPresenter.getAppList();
     }
 
     @Override
