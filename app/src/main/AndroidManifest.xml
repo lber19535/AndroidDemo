@@ -86,6 +86,16 @@
                 <category android:name="android.intent.category.bill.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".third.eventbus.ui.EventBusActivity"
+            android:label="Third Party/Event Bus" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".third.eventbus.ui.StickyEventActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".third.eventbus.ui.EventBusActivity"
+    >
+
+    <Button
+        android:id="@+id/send_post_thread_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Post Thread Event"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/send_ui_thread_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send UI Thread Event"/>
+
+        <TextView
+            android:id="@+id/on_ui_thread_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_back_thread_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Background Thread Event"/>
+
+    <Button
+        android:id="@+id/send_priority_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Priority Event"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/send_sticky_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Sticky Event"/>
+
+        <Button
+            android:id="@+id/open_stick_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Sticky Activity"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/fragment_left"
+            android:name="com.exmaple.bill.third.eventbus.ui.LeftFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"/>
+
+        <fragment
+            android:id="@+id/fragment_right"
+            android:name="com.exmaple.bill.third.eventbus.ui.RightFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>
