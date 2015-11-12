@@ -7,12 +7,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.exmaple.bill.R;
-import com.exmaple.bill.third.eventbus.ui.msg.AsyncMessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.BackgroundMessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.MessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.PriorityMessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.StickyMessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.UIMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.AsyncMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.BackgroundMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.MessageEvent;
+import com.exmaple.bill.third.eventbus.msg.PriorityMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.StickyMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.UIMessageEvent;
 
 import java.util.concurrent.TimeUnit;
 

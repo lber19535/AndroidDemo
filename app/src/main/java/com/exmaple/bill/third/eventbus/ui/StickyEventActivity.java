@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.exmaple.bill.R;
-import com.exmaple.bill.third.eventbus.ui.msg.StickyMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.StickyMessageEvent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.exmaple.bill.third.eventbus.ui.msg;
+package com.exmaple.bill.third.eventbus.msg;
 
 /**
  * Created by bill_lv on 2015/11/11.

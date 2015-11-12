@@ -9,11 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.exmaple.bill.R;
-import com.exmaple.bill.third.eventbus.ui.msg.LeftMessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.PriorityMessageEvent;
-import com.exmaple.bill.third.eventbus.ui.msg.RightMessageEvent;
-
-import java.util.concurrent.TimeUnit;
+import com.exmaple.bill.third.eventbus.msg.PriorityMessageEvent;
+import com.exmaple.bill.third.eventbus.msg.RightMessageEvent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
