@@ -4,6 +4,10 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
@@ -96,6 +100,22 @@
             </intent-filter>
         </activity>
         <activity android:name=".third.eventbus.ui.StickyEventActivity"/>
+        <activity
+            android:name=".designpattern.mvvm.ui.ActivityMVVM"
+            android:label="Design Pattern/MVVM" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".designpattern.mvvm.Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DATA_SMS_RECEIVED"/>
+                <data android:port="80"/>
+                <data android:scheme="sms"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.isupper ? StringUtils.capitalize(user.firstName) : user.firstName}"
+            />
+
+        <TextView
+            android:id="@+id/bindViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onChangeObUser"
+            android:text="change obuser name"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{obUser.firstName}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@{obUser.lastName}"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onChangeIsAudlt"
+            android:text="change user is adult "/>
+
+        <!--beta 版本对条件表达式语法支持还不够好，这里 IDE 会提示错误，但是编译不会报错-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Adult"
+            android:visibility="@{obUser.isAdult() ? View.VISIBLE : View.GONE}"
+            />
+
+        <include
+            layout="@layout/layout_mvvm"
+            bind:obUser="@{obUser}"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StringUtils.g(user)}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:text="random list item"
+                android:onClick="onListChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@{list[index]}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <data>
+
+        <import type="com.exmaple.bill.designpattern.mvvm.model.ObservableUser"/>
+
+        <import type="com.exmaple.bill.designpattern.mvvm.model.User"/>
+
+        <import type="android.view.View"/>
+        <!-- 别名-->
+        <import
+            alias="OUser"
+            type="com.exmaple.bill.designpattern.mvvm.model.other.User"/>
+
+        <import type="com.exmaple.bill.designpattern.mvvm.utils.StringUtils"/>
+
+        <variable
+            name="user"
+            type="User"/>
+
+        <variable
+            name="obUser"
+            type="ObservableUser"/>
+
+        <!--        <variable
+                    name="ouser"
+                    type="OUser"/>-->
+        <import type="java.util.List"/>
+
+        <variable
+            name="list"
+            type="List&lt;String>"/>
+        <variable
+            name="index"
+            type="int"/>
+    </data>
+
+</layout>
