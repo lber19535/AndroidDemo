@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.isupper ? StringUtils.capitalize(user.firstName) : user.firstName}"
+            />
+
+        <TextView
+            android:id="@+id/bindViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <include
+            layout="@layout/layout_databinding_basic"
+            bind:user="@{user}"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StringUtils.g(user)}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:text="random list item"
+                android:onClick="onListChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@{list[index]}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <data class="ActivityBasicBinding" >
+
+        <import type="com.exmaple.bill.databinding.model.User"/>
+
+        <import type="android.view.View"/>
+        <!-- 别名-->
+        <import
+            alias="OUser"
+            type="com.exmaple.bill.databinding.model.other.User"/>
+
+        <import type="com.exmaple.bill.databinding.utils.StringUtils"/>
+
+        <variable
+            name="user"
+            type="User"/>
+
+        <import type="java.util.List"/>
+
+        <variable
+            name="list"
+            type="List&lt;String>"/>
+        <variable
+            name="index"
+            type="int"/>
+    </data>
+
+</layout>

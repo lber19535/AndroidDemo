@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onChangeObUser"
+            android:text="change obuser name"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{obUser.firstName}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@{obUser.lastName}"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onChangeIsAudlt"
+            android:text="change user is adult "/>
+
+        <!--beta 版本对条件表达式语法支持还不够好，这里 IDE 会提示错误，但是编译不会报错-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Adult"
+            android:visibility="@{obUser.isAdult() ? View.VISIBLE : View.GONE}"
+            />
+
+        <Button
+            android:onClick="onChangeObField"
+            android:text="change observable field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"/>
+
+        <Button
+            android:onClick="onChangeUserList"
+            android:text="change observable list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{userList[NameUtils.FIELD_FIRST_NAME] + &quot; &quot; + userList[NameUtils.FIELD_LAST_NAME]}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="onChangeUserMap"
+            android:text="change observable map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{userMap[&quot;firstName&quot;] + &quot; &quot; + userMap[&quot;lastName&quot;]}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <data class="ActivityObserverBinding">
+
+        <import type="com.exmaple.bill.databinding.model.ObservableUser"/>
+        <import type="com.exmaple.bill.databinding.model.ObservableFieldUser"/>
+        <import type="android.databinding.ObservableList"/>
+        <import type="com.exmaple.bill.databinding.utils.NameUtils"/>
+        <import type="android.databinding.ObservableMap"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+        name="obUser"
+        type="ObservableUser"/>
+        <variable
+        name="user"
+        type="ObservableFieldUser"/>
+
+        <variable name="userMap" type="ObservableMap&lt;String, String>"/>
+
+        <variable name="userList" type="ObservableList&lt;String>"/>
+
+    </data>
+
+</layout>
