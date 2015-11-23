@@ -37,4 +37,7 @@
         <item quantity="one">Have an orange</item>
         <item quantity="other">Have %d oranges</item>
     </plurals>
+
+    <string name="firstName">Bill</string>
+    <string name="lastName">Lv</string>
 </resources>

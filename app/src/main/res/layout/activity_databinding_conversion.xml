@@ -14,7 +14,7 @@
             android:layout_height="wrap_content" />
 
         <View
-            android:background="@{error ? @drawable/ic_launcher : @color/colorPrimaryDark}"
+            android:background="@{error ? @color/colorPrimary : @color/colorPrimaryDark}"
             android:layout_width="32dp"
             android:layout_height="32dp"/>
 

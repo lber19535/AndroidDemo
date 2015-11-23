@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
     package="com.exmaple.bill"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
@@ -10,130 +11,148 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="23"/>
 
     <application
-        android:allowBackup="true"
         android:name=".App"
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.exmaple.bill.ActivityMain"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.exmaple.bill.fragment.demo.ActivityRollingPager"
-            android:label="Fragment/Rolling Page" >
+            android:label="Fragment/Rolling Page">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.exmaple.bill.view.demo.ActivitySign"
-            android:label="Views/Sign View" >
+            android:label="Views/Sign View">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.exmaple.bill.utils.demo.ActivityColorUtils"
-            android:label="Utils/Random Color" >
+            android:label="Utils/Random Color">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.exmaple.bill.view.demo.ActivityDrawable"
-            android:label="Views/Text Drawable" >
+            android:label="Views/Text Drawable">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.exmaple.bill.anim.demo.ActivityDrawableAnimation"
-            android:label="Animation/Drawable Animation" >
+            android:label="Animation/Drawable Animation">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.exmaple.bill.anim.demo.ActivityViewAnimation"
-            android:label="Animation/View Animation" >
+            android:label="Animation/View Animation">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".designpattern.mvp.ui.MVPActivity"
-            android:label="Design Pattern/MVP" >
+            android:label="Design Pattern/MVP">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".third.eventbus.ui.EventBusActivity"
-            android:label="Third Party/Event Bus" >
+            android:label="Third Party/Event Bus">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity android:name=".third.eventbus.ui.StickyEventActivity"/>
         <activity
             android:name=".databinding.ui.ActivityBasic"
-            android:label="Data Binding/Basic" >
+            android:label="Data Binding/Basic">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".databinding.ui.ActivityObserver"
-            android:label="Data Binding/Observer" >
+            android:label="Data Binding/Observer">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".databinding.ui.ActivityResource"
-            android:label="Data Binding/Resource" >
+            android:label="Data Binding/Resource">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".databinding.ui.ActivityConversion"
-            android:label="Data Binding/Conversion" >
+            android:label="Data Binding/Conversion">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".databinding.ui.ActivityList"
+            android:label="Data Binding/RecyclerView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".databinding.ui.ActivityAttribute"
+            android:label="Data Binding/Attribute">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
     </application>

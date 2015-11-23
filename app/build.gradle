@@ -4,13 +4,14 @@ apply plugin: 'com.android.databinding'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-    def appName = "AppPermissionCheckTool";
+    def appName = "Android Demo";
 
     defaultConfig {
         applicationId "com.exmaple.bill"
+        versionName "1.1.0"
         minSdkVersion 14
         targetSdkVersion 23
-        renameApk(appName + "-" + versionName + "-" + "M")
+        renameApk(appName + "-" + versionName)
     }
 
     buildTypes {
@@ -30,6 +31,7 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'de.greenrobot:eventbus:2.4.0'
 }

@@ -54,6 +54,18 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
+        <Button
+            android:text="show view stub"
+            android:onClick="onShowViewStub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ViewStub
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_stub"
+            android:layout="@layout/layout_databinding_basic"/>
+
     </LinearLayout>
 
     <data class="ActivityBasicBinding" >
