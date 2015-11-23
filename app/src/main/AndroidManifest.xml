@@ -127,6 +127,15 @@
                 <category android:name="android.intent.category.bill.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".databinding.ui.ActivityConversion"
+            android:label="Data Binding/Conversion" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

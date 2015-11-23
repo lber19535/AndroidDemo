@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <Button
+            android:onClick="onBackgroundColorChanged"
+            android:text="change background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="@{error ? @drawable/ic_launcher : @color/colorPrimaryDark}"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+    </LinearLayout>
+
+    <data>
+        <variable
+            name="error"
+            type="boolean"/>
+    </data>
+</layout>
