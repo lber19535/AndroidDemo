@@ -1,4 +1,4 @@
-package com.exmaple.bill.databinding;
+package com.exmaple.bill.databinding.view;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,21 +12,21 @@ import com.exmaple.bill.R;
 /**
  * Created by bill_lv on 2015/11/23.
  */
-public class NameCard extends LinearLayout {
+public class NameCardView extends LinearLayout {
     private int mAge;
 
     private TextView mFirstName;
     private TextView mLastName;
 
-    public NameCard(Context context) {
+    public NameCardView(Context context) {
         this(context, null);
     }
 
-    public NameCard(Context context, AttributeSet attrs) {
+    public NameCardView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public NameCard(Context context, AttributeSet attrs, int defStyleAttr) {
+    public NameCardView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
