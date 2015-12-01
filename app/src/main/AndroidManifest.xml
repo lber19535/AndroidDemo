@@ -173,6 +173,15 @@
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".designpattern.mvvm.ui.AppListView"
+            android:label="Design Pattern/MVVM">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
