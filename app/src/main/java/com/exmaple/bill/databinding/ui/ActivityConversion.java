@@ -1,6 +1,8 @@
 package com.exmaple.bill.databinding.ui;
 
+import android.databinding.BindingConversion;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -30,9 +32,9 @@ public class ActivityConversion extends AppCompatActivity {
         }
     }
 
-//    @BindingConversion
-//    public static Drawable converColor(int color){
-//        System.out.println("xxxxxx" + color);
-//        return new ColorDrawable(color & 0x10101010);
-//    }
+    @BindingConversion
+    public static ColorDrawable converColor(int color){
+        System.out.println("xxxxxx" + color);
+        return new ColorDrawable(color);
+    }
 }

@@ -32,8 +32,9 @@ public class ActivityAttribute extends AppCompatActivity {
         bind.setImageUrl("xxxx");
     }
 
-    @BindingAdapter({"xxx:imageUrl"})
-    public static void loadImage(NameCardView view, String url) {
-        Toast.makeText(App.getAppContext(),"load img success",Toast.LENGTH_SHORT).show();
-    }
+    // 被
+//    @BindingAdapter({"xxx:imageUrl"})
+//    public static void loadImage(NameCardView view, String url) {
+//        Toast.makeText(App.getAppContext(),"load img success",Toast.LENGTH_SHORT).show();
+//    }
 }

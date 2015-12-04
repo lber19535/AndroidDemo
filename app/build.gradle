@@ -3,7 +3,7 @@ apply plugin: 'com.android.databinding'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '23.0.2'
     def appName = "Android Demo";
 
     defaultConfig {
@@ -34,6 +34,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'io.reactivex:rxjava:1.0.16'
 }
 
 void renameApk(fileName) {

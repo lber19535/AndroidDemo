@@ -1,11 +1,14 @@
 package com.exmaple.bill.databinding.view;
 
 import android.content.Context;
+import android.databinding.BindingAdapter;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.exmaple.bill.App;
 import com.exmaple.bill.R;
 
 
@@ -43,6 +46,11 @@ public class NameCardView extends LinearLayout {
 
     public void setLastName(@NonNull final String lastName) {
         mLastName.setText(lastName);
+    }
+
+    @BindingAdapter({"xxx:imageUrl"})
+    public static void loadImage(NameCardView view, String url) {
+        Toast.makeText(App.getAppContext(),"load img success " + url,Toast.LENGTH_SHORT).show();
     }
 
 }
