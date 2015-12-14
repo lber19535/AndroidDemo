@@ -86,10 +86,10 @@
 
     <data class="ActivityObserverBinding">
 
-        <import type="com.exmaple.bill.databinding.model.ObservableUser"/>
-        <import type="com.exmaple.bill.databinding.model.ObservableFieldUser"/>
+        <import type="com.example.bill.databinding.model.ObservableUser"/>
+        <import type="com.example.bill.databinding.model.ObservableFieldUser"/>
         <import type="android.databinding.ObservableList"/>
-        <import type="com.exmaple.bill.databinding.utils.NameUtils"/>
+        <import type="com.example.bill.databinding.utils.NameUtils"/>
         <import type="android.databinding.ObservableMap"/>
 
         <import type="android.view.View"/>

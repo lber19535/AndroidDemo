@@ -67,7 +67,7 @@
 
         <fragment
             android:id="@+id/fragment_left"
-            android:name="com.exmaple.bill.third.eventbus.ui.LeftFragment"
+            android:name="com.example.bill.third.eventbus.ui.LeftFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -75,7 +75,7 @@
 
         <fragment
             android:id="@+id/fragment_right"
-            android:name="com.exmaple.bill.third.eventbus.ui.RightFragment"
+            android:name="com.example.bill.third.eventbus.ui.RightFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"/>

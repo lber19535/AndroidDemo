@@ -70,15 +70,15 @@
 
     <data class="ActivityBasicBinding" >
 
-        <import type="com.exmaple.bill.databinding.model.User"/>
+        <import type="com.example.bill.databinding.model.User"/>
 
         <import type="android.view.View"/>
         <!-- 别名-->
         <import
             alias="OUser"
-            type="com.exmaple.bill.databinding.model.other.User"/>
+            type="com.example.bill.databinding.model.other.User"/>
 
-        <import type="com.exmaple.bill.databinding.utils.StringUtils"/>
+        <import type="com.example.bill.databinding.utils.StringUtils"/>
 
         <variable
             name="user"

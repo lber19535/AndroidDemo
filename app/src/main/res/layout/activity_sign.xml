@@ -25,7 +25,7 @@
             android:text="clear" />
     </LinearLayout>
 
-    <com.exmaple.bill.view.SignView
+    <com.example.bill.view.SignView
         android:id="@+id/sign"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.exmaple.bill"
+    package="com.example.bill"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.DUMP"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.CHANGE_APP_IDLE_STATE"/>
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="23"/>
 
     <application
-        android:name=".App"
+        android:name="com.example.bill.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.exmaple.bill.ActivityMain"
+            android:name="com.example.bill.ActivityMain"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -29,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.fragment.demo.ActivityRollingPager"
+            android:name="com.example.bill.fragment.demo.ActivityRollingPager"
             android:label="Fragment/Rolling Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -38,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.view.demo.ActivitySign"
+            android:name="com.example.bill.view.demo.ActivitySign"
             android:label="Views/Sign View">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -47,7 +56,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.utils.demo.ActivityColorUtils"
+            android:name="com.example.bill.utils.demo.ActivityColorUtils"
             android:label="Utils/Random Color">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -56,7 +65,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.view.demo.ActivityDrawable"
+            android:name="com.example.bill.view.demo.ActivityDrawable"
             android:label="Views/Text Drawable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -65,7 +74,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.anim.demo.ActivityDrawableAnimation"
+            android:name="com.example.bill.anim.demo.ActivityDrawableAnimation"
             android:label="Animation/Drawable Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -74,7 +83,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.exmaple.bill.anim.demo.ActivityViewAnimation"
+            android:name="com.example.bill.anim.demo.ActivityViewAnimation"
             android:label="Animation/View Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -83,7 +92,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".designpattern.mvp.ui.MVPActivity"
+            android:name="com.example.bill.designpattern.mvp.ui.MVPActivity"
             android:label="Design Pattern/MVP">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -92,7 +101,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".third.eventbus.ui.EventBusActivity"
+            android:name="com.example.bill.third.eventbus.ui.EventBusActivity"
             android:label="Third Party/Event Bus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -100,9 +109,9 @@
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
-        <activity android:name=".third.eventbus.ui.StickyEventActivity"/>
+        <activity android:name="com.example.bill.third.eventbus.ui.StickyEventActivity"/>
         <activity
-            android:name=".databinding.ui.ActivityBasic"
+            android:name="com.example.bill.databinding.ui.ActivityBasic"
             android:label="Data Binding/Basic">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -111,7 +120,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.ui.ActivityObserver"
+            android:name="com.example.bill.databinding.ui.ActivityObserver"
             android:label="Data Binding/Observer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -120,7 +129,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.ui.ActivityResource"
+            android:name="com.example.bill.databinding.ui.ActivityResource"
             android:label="Data Binding/Resource">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -129,7 +138,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.ui.ActivityConversion"
+            android:name="com.example.bill.databinding.ui.ActivityConversion"
             android:label="Data Binding/Conversion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -138,7 +147,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.ui.ActivityList"
+            android:name="com.example.bill.databinding.ui.ActivityList"
             android:label="Data Binding/RecyclerView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -147,7 +156,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.ui.ActivityAttribute"
+            android:name="com.example.bill.databinding.ui.ActivityAttribute"
             android:label="Data Binding/Attribute">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -156,7 +165,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".anim.demo.ActivityPropertyAnimation"
+            android:name="com.example.bill.anim.demo.ActivityPropertyAnimation"
             android:label="Animation/Property Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -165,7 +174,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".anim.demo.ActivityLayoutAnimation"
+            android:name="com.example.bill.anim.demo.ActivityLayoutAnimation"
             android:label="Animation/Layout Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -174,7 +183,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".designpattern.mvvm.ui.AppListView"
+            android:name="com.example.bill.designpattern.mvvm.ui.AppListView"
             android:label="Design Pattern/MVVM">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -183,8 +192,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".third.rx.ActivityRxBasic"
-            android:label="Third Party/Rx">
+            android:name="com.example.bill.third.rx.ActivityRxBasic"
+            android:label="Third Party/RxJava/Basic">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.bill.third.rx.ActivityRxScheduler"
+            android:label="Third Party/RxJava/Scheduler">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.bill.third.rx.ActivityRxTransformation"
+            android:label="Third Party/RxJava/Transformation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity><activity
+            android:name=".utils.ActivityBatteryOpt"
+            android:label="Utils/Battery">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

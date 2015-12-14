@@ -23,7 +23,7 @@
 
     <data>
 
-        <import type="com.exmaple.bill.databinding.model.User"/>
+        <import type="com.example.bill.databinding.model.User"/>
 
         <variable
             name="user"
