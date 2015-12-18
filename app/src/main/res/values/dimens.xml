@@ -10,6 +10,7 @@
     <dimen name="pager_indicator_layout_margin">8dp</dimen>
     <dimen name="pager_indicator_height">30dp</dimen>
     <dimen name="font_22">22sp</dimen>
+    <dimen name="font_18">18sp</dimen>
 
     <dimen name="large_text_size">48sp</dimen>
     <dimen name="normal_text_size">32sp</dimen>

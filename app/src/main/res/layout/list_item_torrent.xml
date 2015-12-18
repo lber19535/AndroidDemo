@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatCheckedTextView
+    android:id="@+id/torrent_name"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkMark="@drawable/bg_torrent_list_item"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="1"
+    android:maxLines="1"
+    android:padding="8dp"
+    android:textSize="@dimen/font_18"/>

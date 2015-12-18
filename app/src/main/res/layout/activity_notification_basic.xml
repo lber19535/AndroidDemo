@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/default_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show default notification"/>
+
+    <Button
+        android:id="@+id/high_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show high notification"/>
+
+    <Button
+        android:id="@+id/max_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show max notification"/>
+
+    <Button
+        android:id="@+id/low_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show low notification"/>
+
+    <Button
+        android:id="@+id/min_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show min notification"/>
+
+</LinearLayout>
