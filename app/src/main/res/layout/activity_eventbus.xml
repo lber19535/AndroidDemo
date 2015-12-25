@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".third.eventbus.ui.EventBusActivity"
+              tools:context=".third.eventbus.ui.ActivityEventBus"
     >
 
     <Button
@@ -67,7 +67,7 @@
 
         <fragment
             android:id="@+id/fragment_left"
-            android:name="com.example.bill.third.eventbus.ui.LeftFragment"
+            android:name="com.example.bill.third.eventbus.ui.FragmentLeft"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -75,7 +75,7 @@
 
         <fragment
             android:id="@+id/fragment_right"
-            android:name="com.example.bill.third.eventbus.ui.RightFragment"
+            android:name="com.example.bill.third.eventbus.ui.FragmentRight"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"/>

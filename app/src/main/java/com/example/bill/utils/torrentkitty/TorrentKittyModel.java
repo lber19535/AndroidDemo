@@ -9,12 +9,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
 import rx.Observable;
-import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
@@ -29,6 +29,8 @@ public class TorrentKittyModel {
     public TorrentKittyModel() {
         Logger.init("TorrentKitty");
     }
+
+    Pattern pattern = Pattern.compile("[a-zA-Z]{2,4}-?[0-9]{3,4}");
 
     public Observable<MagnetContent> requestTorrent(final String key) {
 
@@ -111,13 +113,11 @@ public class TorrentKittyModel {
             }
         }).distinct(new Func1<MagnetContent, String>() {
             public String call(MagnetContent magnetContent) {
-                Logger.d("load item is \n" + magnetContent.toString());
+                Matcher m = pattern.matcher(magnetContent.getName());
+                if (m.find()) {
+                    return m.group().replace("-", "").toUpperCase();
+                }
                 return magnetContent.getName();
-            }
-        }).filter(new Func1<MagnetContent, Boolean>() {
-            public Boolean call(MagnetContent magnetContent) {
-                // filter is empty temporary
-                return true;
             }
         }).subscribeOn(Schedulers.io());
 

@@ -15,7 +15,7 @@ import de.greenrobot.event.EventBus;
 /**
  * Created by bill_lv on 2015/11/12.
  */
-public class StickyEventActivity extends AppCompatActivity {
+public class ActivityStickyEvent extends AppCompatActivity {
 
     @Bind(R.id.sticky_event)
     TextView stickyEventTv;

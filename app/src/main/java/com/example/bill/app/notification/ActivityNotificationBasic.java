@@ -61,7 +61,7 @@ public class ActivityNotificationBasic extends AppCompatActivity {
     }
 
     private void showNotification(String title, String message, int priority) {
-        long[] vibrate = {10,100,20,200};
+        long[] vibrate = {10,100,100,200}; // star with 10ms delay, turn on 100 ms, turn off 100, turn on 200ms
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 .setPriority(priority)
                 .setContentTitle(title)

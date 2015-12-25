@@ -16,7 +16,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MVPActivity extends AppCompatActivity implements MainView {
+public class ActivityMVP extends AppCompatActivity implements MainView {
 
     private AppListAdapter adapter;
     private List<AppListItem> items;

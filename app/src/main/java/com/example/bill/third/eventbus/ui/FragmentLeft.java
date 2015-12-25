@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.bill.R;
+import com.example.bill.third.eventbus.msg.LeftMessageEvent;
 import com.example.bill.third.eventbus.msg.PriorityMessageEvent;
-import com.example.bill.third.eventbus.msg.RightMessageEvent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,7 +19,7 @@ import de.greenrobot.event.EventBus;
 /**
  * Created by bill_lv on 2015/11/12.
  */
-public class RightFragment extends Fragment {
+public class FragmentLeft extends Fragment {
 
     @Bind(R.id.event)
     TextView eventTv;
@@ -27,7 +27,7 @@ public class RightFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        EventBus.getDefault().register(this, 1);
+        EventBus.getDefault().register(this, 2);
     }
 
     @Nullable
@@ -39,11 +39,11 @@ public class RightFragment extends Fragment {
     }
 
     public void onEventBackgroundThread(PriorityMessageEvent event) {
-        EventBus.getDefault().post(new RightMessageEvent(event.message + PriorityMessageEvent.PRIORITY));
+        EventBus.getDefault().post(new LeftMessageEvent(event.message + PriorityMessageEvent.PRIORITY));
         PriorityMessageEvent.PRIORITY++;
     }
 
-    public void onEventMainThread(RightMessageEvent event) {
+    public void onEventMainThread(LeftMessageEvent event) {
         eventTv.setText(event.message);
     }
 
@@ -52,4 +52,5 @@ public class RightFragment extends Fragment {
         super.onStop();
         EventBus.getDefault().unregister(this);
     }
+
 }

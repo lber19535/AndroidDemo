@@ -24,7 +24,7 @@ import de.greenrobot.event.EventBus;
 /**
  * Created by bill_lv on 2015/11/11.
  */
-public class EventBusActivity extends AppCompatActivity {
+public class ActivityEventBus extends AppCompatActivity {
 
     @Bind(R.id.on_ui_thread_text)
     TextView uiTextTv;
@@ -75,7 +75,7 @@ public class EventBusActivity extends AppCompatActivity {
 
     @OnClick(R.id.open_stick_activity)
     public void openStickyActivity(){
-        Intent intent = new Intent(this, StickyEventActivity.class);
+        Intent intent = new Intent(this, ActivityStickyEvent.class);
         startActivity(intent);
     }
 
