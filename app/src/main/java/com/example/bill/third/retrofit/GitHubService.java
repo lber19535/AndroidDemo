@@ -9,6 +9,7 @@ import retrofit.http.GET;
 import retrofit.http.Headers;
 import retrofit.http.POST;
 import retrofit.http.Path;
+import rx.Observable;
 
 /**
  * Created by bill_lv on 2015/12/21.
@@ -30,6 +31,8 @@ public interface GitHubService {
     })
     @GET("/users/{username}")
     Call<ResponseBody> getUser2(@Path("username") String username);
+    @GET("/users/{username}")
+    Observable<User> getUser4(@Path("username") String username);
 
 
     // converter

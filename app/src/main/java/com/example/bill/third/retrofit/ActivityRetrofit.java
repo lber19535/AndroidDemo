@@ -13,6 +13,10 @@ import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
+import retrofit.RxJavaCallAdapterFactory;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by bill_lv on 2015/12/21.
@@ -82,6 +86,25 @@ public class ActivityRetrofit extends AppCompatActivity {
 
         MyCall<User> users = githubService.getUser3("lber19535");
         Logger.d(users.string().getName());
+    }
+
+    public void getUserByObservable(View v) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.github.com")
+                .addConverterFactory(new UserConverterFactory())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+
+        GitHubService githubService = retrofit.create(GitHubService.class);
+
+        githubService.getUser4("lber19535")
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Action1<User>() {
+                    @Override
+                    public void call(User user) {
+                        Logger.d(user.getName());
+                    }
+                });
     }
 
 }
