@@ -113,7 +113,7 @@ public class TorrentKittyModel {
             }
         }).distinct(new Func1<MagnetContent, String>() {
             public String call(MagnetContent magnetContent) {
-                Matcher m = pattern.matcher(magnetContent.getName());
+                Matcher m = pattern.matcher(magnetContent.getName().replace("SIS001",""));
                 if (m.find()) {
                     return m.group().replace("-", "").toUpperCase();
                 }
