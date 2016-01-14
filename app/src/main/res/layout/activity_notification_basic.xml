@@ -34,4 +34,10 @@
         android:layout_height="wrap_content"
         android:text="show min notification"/>
 
+    <Button
+        android:id="@+id/expanded_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show expanded layout  notification"/>
+
 </LinearLayout>

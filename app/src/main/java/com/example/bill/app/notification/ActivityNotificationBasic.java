@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
 import com.example.bill.R;
+import com.example.bill.third.rx.ActivityRxBasic;
 
 import java.util.Random;
 
@@ -61,7 +62,7 @@ public class ActivityNotificationBasic extends AppCompatActivity {
     }
 
     private void showNotification(String title, String message, int priority) {
-        long[] vibrate = {10,100,100,200}; // star with 10ms delay, turn on 100 ms, turn off 100, turn on 200ms
+        long[] vibrate = {10, 100, 100, 200}; // star with 10ms delay, turn on 100 ms, turn off 100, turn on 200ms
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 .setPriority(priority)
                 .setContentTitle(title)
@@ -69,14 +70,38 @@ public class ActivityNotificationBasic extends AppCompatActivity {
                 .setContentText(message)
                 .setVibrate(vibrate);
 
-        Intent intent = new Intent(this, ActivityNotificationBasic.class);
+        Intent intent = new Intent(this, ActivityRxBasic.class);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         stackBuilder.addNextIntent(intent);
         stackBuilder.addParentStack(this);
 
-        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(pendingIntent);
+
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        mNotificationManager.notify(new Random().nextInt(), builder.build());
+
+    }
+
+    @OnClick(R.id.expanded_btn)
+    public void showExpandedLayoutNotification() {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.drawable.ic_launcher)
+                .setContentText("content")
+                .setAutoCancel(true)
+                .setContentTitle("title");
+
+        NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
+        inboxStyle.setBigContentTitle("big content title");
+
+        inboxStyle.addLine("event 1");
+        inboxStyle.addLine("event 2");
+        inboxStyle.addLine("event 3");
+        inboxStyle.addLine("event 4");
+
+        builder.setStyle(inboxStyle);
 
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
