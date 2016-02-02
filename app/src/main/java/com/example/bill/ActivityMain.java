@@ -5,10 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,9 +22,8 @@ import android.widget.SimpleAdapter;
 
 /**
  * 列表界面
- * 
- * @author Lv Beier
  *
+ * @author Lv Beier
  */
 public class ActivityMain extends AppCompatActivity {
 
@@ -46,19 +48,21 @@ public class ActivityMain extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.list);
 
         BaseAdapter adapter = new SimpleAdapter(this, getListData(path),
-                android.R.layout.simple_list_item_1, new String[] { TITLE },
-                new int[] { android.R.id.text1 });
+                android.R.layout.simple_list_item_1, new String[]{TITLE},
+                new int[]{android.R.id.text1});
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
+                                    int position, long id) {
                 @SuppressWarnings("unchecked")
                 Map<String, Object> map = (Map<String, Object>) mListView
                         .getItemAtPosition(position);
                 Intent intent = (Intent) map.get(INTENT);
-                startActivity(intent);
+                ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(ActivityMain.this);
+
+                ActivityCompat.startActivity(ActivityMain.this, intent, optionsCompat.toBundle());
             }
         });
 
