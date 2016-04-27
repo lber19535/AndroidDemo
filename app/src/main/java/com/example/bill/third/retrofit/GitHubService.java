@@ -5,6 +5,8 @@ import com.squareup.okhttp.ResponseBody;
 
 import retrofit.Call;
 import retrofit.http.Body;
+import retrofit.http.Field;
+import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
 import retrofit.http.Headers;
 import retrofit.http.POST;
@@ -25,6 +27,9 @@ public interface GitHubService {
     Call<ResponseBody> getMyInfo();
     @POST("/user/lber19535")
     Call<ResponseBody> getUser(@Body RequestBody body);
+    @FormUrlEncoded
+    @POST("/user/lber19535")
+    Call<ResponseBody> getUser5(@Field("user") String body);
     @Headers({
             "Accept: application/vnd.github.v3.full+json",
             "User-Agent: Retrofit-Sample-App"

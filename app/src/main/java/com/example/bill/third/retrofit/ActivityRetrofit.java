@@ -36,7 +36,7 @@ public class ActivityRetrofit extends AppCompatActivity {
 
         GitHubService githubService = retrofit.create(GitHubService.class);
 
-        Call<ResponseBody> users = githubService.getUser("lber19535");
+        Call<ResponseBody> users = githubService.getUser5("lber19535");
         users.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Response<ResponseBody> response, Retrofit retrofit) {

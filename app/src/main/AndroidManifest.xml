@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.example.bill"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="1"
-    android:versionName="1.0">
+<manifest package="com.example.bill"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.DUMP"/>
@@ -18,23 +21,28 @@
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
     <uses-permission android:name="android.permission.CHANGE_APP_IDLE_STATE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="23"/>
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <android:uses-permission android:name="android.permission.READ_CALL_LOG"/>
 
     <application
-        android:name="com.example.bill.App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.bill.ActivityMain"
+            android:name=".ActivityMain"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -43,6 +51,7 @@
             android:label="App/Fragment/Rolling Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -51,6 +60,7 @@
             android:label="App/Secure/Device ID">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -59,6 +69,7 @@
             android:label="App/Views/Sign View">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -67,6 +78,7 @@
             android:label="Utils/Random Color">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -75,6 +87,7 @@
             android:label="Utils/Torrent Kitty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -83,6 +96,7 @@
             android:label="App/Views/Text Drawable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -91,6 +105,7 @@
             android:label="App/Animation/Drawable Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -99,6 +114,7 @@
             android:label="App/Animation/View Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -107,6 +123,7 @@
             android:label="Design Pattern/MVP">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -115,6 +132,7 @@
             android:label="Third Party/Event Bus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -123,6 +141,7 @@
             android:label="Third Party/Retrofit">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -132,55 +151,62 @@
             android:label="Third Party/Robo Test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity android:name=".third.robotest.LoginActivity"/>
         <activity
-            android:name="com.example.bill.databinding.ui.ActivityBasic"
+            android:name=".databinding.ui.ActivityBasic"
             android:label="Data Binding/Basic">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.databinding.ui.ActivityObserver"
+            android:name=".databinding.ui.ActivityObserver"
             android:label="Data Binding/Observer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.databinding.ui.ActivityResource"
+            android:name=".databinding.ui.ActivityResource"
             android:label="Data Binding/Resource">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.databinding.ui.ActivityConversion"
+            android:name=".databinding.ui.ActivityConversion"
             android:label="Data Binding/Conversion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.databinding.ui.ActivityList"
+            android:name=".databinding.ui.ActivityList"
             android:label="Data Binding/RecyclerView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.databinding.ui.ActivityAttribute"
+            android:name=".databinding.ui.ActivityAttribute"
             android:label="Data Binding/Attribute">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -198,38 +224,43 @@
             android:label="App/Animation/Layout Animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.designpattern.mvvm.ui.AppListView"
+            android:name=".designpattern.mvvm.ui.AppListView"
             android:label="Design Pattern/MVVM">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.third.rx.ActivityRxBasic"
+            android:name=".third.rx.ActivityRxBasic"
             android:label="Third Party/RxJava/Basic">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.third.rx.ActivityRxScheduler"
+            android:name=".third.rx.ActivityRxScheduler"
             android:label="Third Party/RxJava/Scheduler">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bill.third.rx.ActivityRxTransformation"
+            android:name=".third.rx.ActivityRxTransformation"
             android:label="Third Party/RxJava/Transformation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -238,6 +269,7 @@
             android:label="Utils/Battery">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
@@ -246,6 +278,70 @@
             android:label="App/Notification/Basic">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".third.uil.ActivityUIL"
+            android:label="Third Party/UIL">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.design.ActivityTextInput"
+            android:label="App/Design/TextInput">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.design.ActivityBottomSheet"
+            android:label="App/Design/BottomSheet">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.design.ActivityCoordinator"
+            android:label="App/Design/Coordinator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".third.swipeback.ActivitySwipeBack"
+            android:label="Third Party/Swipe to back">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.view.ActivityScaleImage"
+            android:label="App/Views/ScaleImageView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".third.dagger2.ui.ActivityCommitList"
+            android:label="Third Party/Dagger2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.bill.SAMPLE_CODE"/>
             </intent-filter>
         </activity>

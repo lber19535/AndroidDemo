@@ -4,10 +4,14 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bill.R;
 import com.example.bill.databinding.ActivityDatabindingAttributeBinding;
+import com.jakewharton.rxbinding.view.RxView;
+import com.jakewharton.rxbinding.widget.RxCheckedTextView;
+import com.jakewharton.rxbinding.widget.RxTextView;
 
 /**
  * Created by bill_lv on 2015/11/23.

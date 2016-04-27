@@ -5,7 +5,7 @@
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v21/styles.xml on API 21+ devices.
     -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- API 21 theme customizations can go here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -22,6 +22,10 @@
         <item name="android:windowSharedElementExitTransition">
             @transition/change_image_transform</item>
 
+    </style>
+
+    <style name="LoginInputTextStyle" parent="Widget.Design.TextInputLayout">
+        <item name="colorAccent">@color/indicator_hint</item>
     </style>
 
 </resources>
