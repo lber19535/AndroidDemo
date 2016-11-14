@@ -42,5 +42,7 @@
     <string name="lastName">Lv</string>
     <string name="title_activity_activity_uil">ActivityUIL</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 
 </resources>

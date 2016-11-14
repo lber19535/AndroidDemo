@@ -45,12 +45,11 @@ android {
 
 dependencies {
     // test
-    testCompile "org.robolectric:robolectric:3.0"
-    testCompile 'junit:junit:4.12'
-    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.5.4'
 
+    //    provided 'javax.annotation:jsr250-api:1.0'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.android.support:gridlayout-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'de.greenrobot:eventbus:2.4.0'
@@ -68,8 +67,11 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'com.hannesdorfmann:swipeback:1.0.3'
     compile 'com.google.dagger:dagger:2.2'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    testCompile 'org.robolectric:robolectric:3.0'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.5.4'
     apt 'com.google.dagger:dagger-compiler:2.2'
-//    provided 'javax.annotation:jsr250-api:1.0'
 }
 
 void renameApk(fileName) {

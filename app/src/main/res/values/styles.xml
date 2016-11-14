@@ -23,4 +23,9 @@
         <item name="colorControlHighlight">@color/indicator_hint</item>
     </style>
 
+    <style name="Theme.Dialog.NoTitle" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>
