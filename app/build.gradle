@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.android.databinding'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'org.fabiomsr.drawableoptimizer'
 
 android {
     compileSdkVersion 23
@@ -72,6 +73,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.5.4'
     apt 'com.google.dagger:dagger-compiler:2.2'
+}
+
+drawableOptimizer {
+    optimizer = 'pngquant'
+    compressionLevel = 9
+    iterations = 15
+    onlyOnRelease = false
+    logLevel = 'info'
 }
 
 void renameApk(fileName) {
