@@ -41,7 +41,6 @@ public class ActivityCommitList extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         GithubApiComponent githubApiComponent = DaggerGithubApiComponent.create();
-        GithubApi api = githubApiComponent.getGithubApi();
         githubApiComponent.intjectActivity(this);
 
         presenter.loadCommitList()

@@ -17,9 +17,9 @@ import android.view.View;
 import com.example.bill.R;
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-public class ActivityJobSheduler extends AppCompatActivity {
+public class ActivityJobScheduler extends AppCompatActivity {
 
-    private static final String TAG = "ActivityJobSheduler";
+    private static final String TAG = "ActivityJobScheduler";
     private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {

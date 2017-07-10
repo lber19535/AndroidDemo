@@ -376,7 +376,19 @@
             android:name=".app.service.MyJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".app.service.ActivityJobSheduler">
+        <activity
+            android:name=".app.service.ActivityJobScheduler"
+            android:label="App/Service/JobScheduler">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".app.channel.ActivityChannel"
+            android:label="App/Notification/Channel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

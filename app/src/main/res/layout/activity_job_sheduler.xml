@@ -5,7 +5,7 @@
     android:id="@+id/activity_job_sheduler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bill.app.service.ActivityJobSheduler">
+    tools:context="com.example.bill.app.service.ActivityJobScheduler">
 
     <Button
         android:id="@+id/job_btn"
