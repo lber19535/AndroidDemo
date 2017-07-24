@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.example.bill.R;
-import com.example.bill.third.dagger2.api.GithubApi;
 import com.example.bill.third.dagger2.di.component.DaggerGithubApiComponent;
 import com.example.bill.third.dagger2.di.component.GithubApiComponent;
 import com.example.bill.third.dagger2.model.GithubCommitItem;
@@ -41,7 +40,7 @@ public class ActivityCommitList extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         GithubApiComponent githubApiComponent = DaggerGithubApiComponent.create();
-        githubApiComponent.intjectActivity(this);
+        githubApiComponent.injectActivity(this);
 
         presenter.loadCommitList()
                 .subscribeOn(Schedulers.io())

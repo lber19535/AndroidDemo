@@ -16,5 +16,5 @@ public interface GithubApiComponent {
 
     GithubApi getGithubApi();
 
-    void intjectActivity(ActivityCommitList activity);
+    void injectActivity(ActivityCommitList activity);
 }
