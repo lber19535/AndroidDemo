@@ -79,7 +79,7 @@ drawableOptimizer {
     optimizer = 'pngquant'
     compressionLevel = 9
     iterations = 15
-    onlyOnRelease = false
+    onlyOnRelease = true
     logLevel = 'info'
 }
 
