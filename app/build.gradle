@@ -5,7 +5,7 @@ apply plugin: 'org.fabiomsr.drawableoptimizer'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '23.0.3'
+    buildToolsVersion '25.0.0'
     def appName = "Android Demo";
 
     useLibrary 'org.apache.http.legacy'
