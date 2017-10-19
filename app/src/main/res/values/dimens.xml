@@ -25,4 +25,7 @@ http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
     -->
     <dimen name="widget_margin">8dp</dimen>
 
+    <dimen name="jk_favor_number_size">16dp</dimen>
+    <dimen name="jk_favor_number_split">2dp</dimen>
+
 </resources>

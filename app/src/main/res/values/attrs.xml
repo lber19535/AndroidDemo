@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FavorButton">
+        <attr name="number" format="integer" />
+        <attr name="numberColor" format="color" />
+    </declare-styleable>
+</resources>

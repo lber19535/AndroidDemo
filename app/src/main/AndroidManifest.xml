@@ -343,6 +343,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".app.view.favor.FavorActivity"
+            android:label="App/Views/Custom/Favor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.bill.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".third.dagger2.ui.ActivityCommitList"
             android:label="Third Party/Dagger2">
             <intent-filter>

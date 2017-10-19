@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/select_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/shining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_messages_like_selected_shining"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_messages_like_selected"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_messages_like_unselected" />
+
+    </FrameLayout>
+
+    <com.example.bill.app.view.favor.FavorNumberView
+        android:id="@+id/favor_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_alignTop="@+id/select_wrapper"
+        android:layout_alignBottom="@+id/select_wrapper"
+        android:layout_toRightOf="@+id/select_wrapper" />
+
+
+</RelativeLayout>
+
