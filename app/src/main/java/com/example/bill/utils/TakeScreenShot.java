@@ -13,6 +13,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 /**
+ * Need root permission to use input keyevent
+ *
  * Created by bill on 2017/10/12.
  */
 
@@ -36,8 +38,12 @@ public class TakeScreenShot extends AppCompatActivity {
                             DataOutputStream dos = new DataOutputStream(process.getOutputStream());
                             dos.writeBytes(keyCommand);
                             dos.flush();
-                            
+
+                            System.out.println(process.waitFor());
+                            System.out.println(process.exitValue());
                         } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
