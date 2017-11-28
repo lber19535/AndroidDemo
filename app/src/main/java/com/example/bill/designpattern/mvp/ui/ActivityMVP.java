@@ -13,7 +13,7 @@ import com.example.bill.designpattern.mvp.presenter.MainPresenterImpl;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ActivityMVP extends AppCompatActivity implements MainView {
@@ -23,7 +23,7 @@ public class ActivityMVP extends AppCompatActivity implements MainView {
 
     private MainPresenter mainPresenter;
 
-    @Bind(R.id.list)
+    @BindView(R.id.list)
     ListView appLv;
 
     @Override

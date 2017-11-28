@@ -17,7 +17,7 @@ import com.example.bill.databinding.utils.NameUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
  */
 public class ActivityLayoutAnimation extends AppCompatActivity {
 
-    @Bind(R.id.target_lv)
+    @BindView(R.id.target_lv)
     LinearLayout targetLv;
     List<User> userList = new ArrayList<>();
 

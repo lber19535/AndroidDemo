@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.example.bill.R;
 import com.example.bill.third.eventbus.msg.StickyMessageEvent;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
@@ -17,7 +17,7 @@ import de.greenrobot.event.EventBus;
  */
 public class ActivityStickyEvent extends AppCompatActivity {
 
-    @Bind(R.id.sticky_event)
+    @BindView(R.id.sticky_event)
     TextView stickyEventTv;
 
     @Override

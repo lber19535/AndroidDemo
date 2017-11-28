@@ -16,7 +16,7 @@ import com.example.bill.third.eventbus.msg.UIMessageEvent;
 
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
@@ -26,7 +26,7 @@ import de.greenrobot.event.EventBus;
  */
 public class ActivityEventBus extends AppCompatActivity {
 
-    @Bind(R.id.on_ui_thread_text)
+    @BindView(R.id.on_ui_thread_text)
     TextView uiTextTv;
 
     @Override

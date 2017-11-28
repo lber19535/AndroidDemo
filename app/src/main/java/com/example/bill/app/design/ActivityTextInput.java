@@ -9,7 +9,7 @@ import android.text.TextWatcher;
 
 import com.example.bill.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
  */
 public class ActivityTextInput extends AppCompatActivity {
 
-    @Bind(R.id.text_input)
+    @BindView(R.id.text_input)
     TextInputLayout textInputLayout;
 
     @Override

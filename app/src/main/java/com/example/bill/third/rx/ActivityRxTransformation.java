@@ -27,7 +27,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Subscriber;
@@ -45,7 +45,7 @@ public class ActivityRxTransformation extends AppCompatActivity {
 
     private static final int INTERNET_PERMISSION = 0x01;
 
-    @Bind(R.id.img)
+    @BindView(R.id.img)
     ImageView img;
 
     @Override

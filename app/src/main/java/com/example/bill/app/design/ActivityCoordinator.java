@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -26,10 +26,10 @@ import butterknife.ButterKnife;
  */
 public class ActivityCoordinator extends AppCompatActivity {
 
-    @Bind(R.id.list)
+    @BindView(R.id.list)
     RecyclerView listView;
 
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton fab;
 
     @Override

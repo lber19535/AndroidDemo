@@ -12,7 +12,7 @@ import com.example.bill.R;
 import com.example.bill.third.eventbus.msg.PriorityMessageEvent;
 import com.example.bill.third.eventbus.msg.RightMessageEvent;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.greenrobot.event.EventBus;
 
@@ -21,7 +21,7 @@ import de.greenrobot.event.EventBus;
  */
 public class FragmentRight extends Fragment {
 
-    @Bind(R.id.event)
+    @BindView(R.id.event)
     TextView eventTv;
 
     @Override

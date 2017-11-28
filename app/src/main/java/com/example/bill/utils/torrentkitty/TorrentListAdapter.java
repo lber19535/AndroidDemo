@@ -11,7 +11,7 @@ import com.example.bill.R;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -59,7 +59,7 @@ public class TorrentListAdapter extends BaseAdapter {
     }
 
     class Holder {
-        @Bind(R.id.torrent_name)
+        @BindView(R.id.torrent_name)
         CheckedTextView torrentNameTv;
 
         public Holder(View v) {

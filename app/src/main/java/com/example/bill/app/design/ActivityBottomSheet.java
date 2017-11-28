@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -33,11 +33,11 @@ import butterknife.ButterKnife;
  */
 public class ActivityBottomSheet extends AppCompatActivity {
 
-    @Bind(R.id.show_bottom_sheet)
+    @BindView(R.id.show_bottom_sheet)
     Button showSheetBtn;
-    @Bind(R.id.show_bottom_view)
+    @BindView(R.id.show_bottom_view)
     Button showSheetViewBtn;
-    @Bind(R.id.list)
+    @BindView(R.id.list)
     RecyclerView listView;
 
 //    @Bind(R.id.list_main)

@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.example.bill.R;
 import com.example.bill.databinding.utils.NameUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Observer;
@@ -28,7 +28,7 @@ import rx.functions.Action1;
  */
 public class ActivityRxBasic extends AppCompatActivity {
 
-    @Bind(R.id.img)
+    @BindView(R.id.img)
     ImageView img;
 
     @Override

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnItemClick;
@@ -33,13 +33,13 @@ import rx.android.schedulers.AndroidSchedulers;
  */
 public class ActivityTorrentKitty extends AppCompatActivity {
 
-    @Bind(R.id.torrent_list)
+    @BindView(R.id.torrent_list)
     ListView listView;
 
-    @Bind(R.id.search_key)
+    @BindView(R.id.search_key)
     EditText searchEt;
 
-    @Bind(R.id.search)
+    @BindView(R.id.search)
     Button searchBtn;
 
     private TorrentKittyViewModel kittyViewModel;

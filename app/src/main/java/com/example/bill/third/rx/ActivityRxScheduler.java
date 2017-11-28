@@ -22,7 +22,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Random;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Subscriber;
@@ -38,10 +38,10 @@ import rx.schedulers.Schedulers;
  */
 public class ActivityRxScheduler extends AppCompatActivity {
 
-    @Bind(R.id.img)
+    @BindView(R.id.img)
     ImageView img;
 
-    @Bind(R.id.sumTv)
+    @BindView(R.id.sumTv)
     TextView sumTv;
 
     private static final int INTERNET_PERMISSION = 0x01;

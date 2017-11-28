@@ -13,7 +13,7 @@ import com.example.bill.designpattern.mvp.model.AppListItem;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -62,11 +62,11 @@ public class AppListAdapter extends BaseAdapter {
     }
 
     class ViewHolder {
-        @Bind(R.id.icon)
+        @BindView(R.id.icon)
         ImageView appIconIv;
-        @Bind(R.id.app_name)
+        @BindView(R.id.app_name)
         TextView appNameTv;
-        @Bind(R.id.app_pkg)
+        @BindView(R.id.app_pkg)
         TextView appPkgTv;
 
         ViewHolder(View v) {

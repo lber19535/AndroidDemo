@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.example.bill.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -22,7 +22,7 @@ import butterknife.OnClick;
  */
 public class ActivityPropertyAnimation extends AppCompatActivity {
 
-    @Bind(R.id.target_tv)
+    @BindView(R.id.target_tv)
     TextView targetTv;
 
     @Override
