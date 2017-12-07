@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.example.bill.R;
@@ -18,6 +19,7 @@ public class FavorActivity extends AppCompatActivity {
 
     private FavorButton favorBtn1;
     private FavorButton favorBtn2;
+    private FavorButtonV2 favorBtnV2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class FavorActivity extends AppCompatActivity {
 
         favorBtn1 = (FavorButton) findViewById(R.id.favor_1);
         favorBtn2 = (FavorButton) findViewById(R.id.favor_2);
+        favorBtnV2 = findViewById(R.id.fav2);
 
 
         findViewById(R.id.up_1).setOnClickListener(new View.OnClickListener() {
