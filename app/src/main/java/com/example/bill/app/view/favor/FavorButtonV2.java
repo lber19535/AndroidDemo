@@ -423,8 +423,8 @@ public class FavorButtonV2 extends View {
         mTextBounds.setEmpty();
         mNumberPaint.getTextBounds(mNumberStr, 0, mNumberStr.length(), mTextBounds);
 
-        // text align bottom 1/3
-        int d = (getHeight() - mTextBounds.height()) / 3 * 2;
+        // text align bottom 2/5
+        int d = (getHeight() - mTextBounds.height()) / 5 * 3;
 
         // text base location
         float basePositionY = mTextBounds.height() + d;
