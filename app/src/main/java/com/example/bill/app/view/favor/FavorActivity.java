@@ -11,7 +11,7 @@ import com.example.bill.R;
 
 /**
  * simulate jike app favor button
- *
+ * <p>
  * Created by bill on 2017/10/16.
  */
 
@@ -63,6 +63,20 @@ public class FavorActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(boolean isChecked) {
                 Toast.makeText(FavorActivity.this, "check " + isChecked, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.up_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                favorBtnV2.setNumberWithAnim(favorBtnV2.getNumber() + 1);
+            }
+        });
+
+        findViewById(R.id.down_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                favorBtnV2.setNumberWithAnim(favorBtnV2.getNumber() - 1);
             }
         });
     }

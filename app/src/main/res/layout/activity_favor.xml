@@ -60,8 +60,32 @@
             android:text="-" />
     </LinearLayout>
 
-    <com.example.bill.app.view.favor.FavorButtonV2
-        android:id="@+id/fav2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.example.bill.app.view.favor.FavorButtonV2
+            android:id="@+id/fav2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:number="1234"
+            app:numberColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/up_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/down_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+    </LinearLayout>
+
+
 </LinearLayout>
