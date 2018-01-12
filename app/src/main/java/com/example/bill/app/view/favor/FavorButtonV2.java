@@ -80,6 +80,10 @@ public class FavorButtonV2 extends View {
 
     private ValueAnimator mSelectScaleDownAnim = ValueAnimator.ofFloat(1, 0.7f);
     private ValueAnimator mSelectScaleUpAnim = ValueAnimator.ofFloat(0.7f, 1);
+    private ValueAnimator mNewNumberAlphaAnim = ValueAnimator.ofInt(0, 255);
+    private ValueAnimator mOldNumberAlphaAnim = ValueAnimator.ofInt(255, 0);
+    private ValueAnimator mOffsetInAnim = new ValueAnimator();
+    private ValueAnimator mOffsetOutAnim = new ValueAnimator();
     private LinearInterpolator mLinearInterpolator = new LinearInterpolator();
 
     private ValueAnimator.AnimatorUpdateListener mSelectScaleAnimUpdateListener;
@@ -192,23 +196,82 @@ public class FavorButtonV2 extends View {
         mNumberSplitSize = getResources().getDimension(R.dimen.jk_favor_number_split);
 
         // init number animation resource
-//        AnimatorSet animatorSet = new AnimatorSet();
-//
-//
-//        animatorSet.setDuration(ANIMATION_DURATION);
+
+        mNewNumberAlphaAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mNewNumberPaint.setAlpha((Integer) animation.getAnimatedValue());
+            }
+        });
+        mNewNumberAlphaAnim.setInterpolator(mLinearInterpolator);
+
+        mOldNumberAlphaAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mOldNumberPaint.setAlpha((Integer) animation.getAnimatedValue());
+            }
+        });
+        mOldNumberAlphaAnim.setInterpolator(mLinearInterpolator);
 
 
-//        mNumberAnimListener = new AnimatorListenerAdapter() {
-//            @Override
-//            public void onAnimationStart(Animator animation) {
-//                mNeedNumberAnim = true;
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animator animation) {
-//                mNeedNumberAnim = false;
-//            }
-//        };
+        mOffsetInAnim.setFloatValues(0, -mTextHeight);
+        mOffsetInAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mDiffOffsetUp = (float) animation.getAnimatedValue();
+                requestLayout();
+                invalidate();
+            }
+        });
+        mOffsetInAnim.setInterpolator(mLinearInterpolator);
+
+        mOffsetOutAnim.setFloatValues(0,mTextHeight);
+        mOffsetOutAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mDiffOffsetDown = (float) animation.getAnimatedValue();
+
+                invalidate();
+            }
+        });
+        mOffsetOutAnim.setInterpolator(mLinearInterpolator);
+        mOffsetOutAnim.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                requestLayout();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+
+        mNumberAnimListener = new AnimatorListenerAdapter() {
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                mNeedNumberAnim = false;
+                invalidate();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                mNeedNumberAnim = false;
+                invalidate();
+            }
+        };
+
 
     }
 
@@ -257,45 +320,10 @@ public class FavorButtonV2 extends View {
     private void animNumberChange() {
         AnimatorSet animatorSet = new AnimatorSet();
 
-        ValueAnimator newNumberAlphaAnim = ValueAnimator.ofInt(0, 255);
-        newNumberAlphaAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                mNewNumberPaint.setAlpha((Integer) animation.getAnimatedValue());
-            }
-        });
-
-        ValueAnimator oldNumberAlphaAnim = ValueAnimator.ofInt(255, 0);
-        oldNumberAlphaAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                mOldNumberPaint.setAlpha((Integer) animation.getAnimatedValue());
-            }
-        });
-
         if (mOldNumber < mNumber) {
-            ValueAnimator offsetInAnim = ValueAnimator.ofFloat(0, -mTextHeight);
-            offsetInAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    mDiffOffsetUp = (float) animation.getAnimatedValue();
-                    requestLayout();
-                    invalidate();
-                }
-            });
-
-            animatorSet.playTogether(newNumberAlphaAnim, oldNumberAlphaAnim, offsetInAnim);
+            animatorSet.playTogether(mNewNumberAlphaAnim, mOldNumberAlphaAnim, mOffsetInAnim);
         } else if (mOldNumber > mNumber) {
-            ValueAnimator offsetOutAnim = ValueAnimator.ofFloat(0, mTextHeight);
-            offsetOutAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    mDiffOffsetDown = (float) animation.getAnimatedValue();
-
-                    invalidate();
-                }
-            });
-            offsetOutAnim.addListener(new Animator.AnimatorListener() {
+            mOffsetOutAnim.addListener(new Animator.AnimatorListener() {
                 @Override
                 public void onAnimationStart(Animator animation) {
 
@@ -316,33 +344,10 @@ public class FavorButtonV2 extends View {
 
                 }
             });
-            animatorSet.playTogether(newNumberAlphaAnim, oldNumberAlphaAnim, offsetOutAnim);
+            animatorSet.playTogether(mNewNumberAlphaAnim, mOldNumberAlphaAnim, mOffsetOutAnim);
         }
 
-
-        animatorSet.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                mNeedNumberAnim = false;
-                invalidate();
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-                mNeedNumberAnim = false;
-                invalidate();
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
+        animatorSet.addListener(mNumberAnimListener);
         animatorSet.setDuration(ANIMATION_DURATION);
 
         animatorSet.start();
@@ -448,8 +453,6 @@ public class FavorButtonV2 extends View {
 
             canvas.drawText(oldNumberStr, mDifferentIndex, oldNumberStr.length(), sameTextWith + basePositionX, oldY, mOldNumberPaint);
             canvas.drawText(mNumberStr, mDifferentIndex, mNumberStr.length(), sameTextWith + basePositionX, newY, mNewNumberPaint);
-
-
         } else {
             canvas.drawText(mNumberStr, basePositionX, basePositionY, mNumberPaint);
         }
